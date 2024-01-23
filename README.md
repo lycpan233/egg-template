@@ -40,3 +40,7 @@ pnpm add husky -D
 pnpm run husky
 npx husky add .husky/pre-commit "npm run lint"
 ```
+
+# commitizen + commitlint + husky
+
+详见博客: [Commitizen + Commitlint + husky 实践](https://lycpan233.top/pages/abfb36/#commitizen)

@@ -8,9 +8,13 @@
   },
   "dependencies": {
     "egg": "^3.17.5",
+    "egg-router-plus": "^2.0.0",
     "egg-scripts": "2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.5.0",
+    "@commitlint/config-conventional": "^18.5.0",
+    "cz-customizable": "^7.0.0",
     "egg-bin": "6",
     "egg-mock": "5",
     "eslint": "8",
@@ -36,5 +40,13 @@
     "url": ""
   },
   "author": "lycpan233",
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".husky/git/commitizen.js"
+    }
+  }
 }
