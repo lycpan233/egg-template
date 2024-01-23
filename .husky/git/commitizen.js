@@ -44,9 +44,9 @@ module.exports = {
     // 覆写提示的信息
     messages: {
         type: "选择你要提交的类型:",
-        // scope: '\n选择一个 scope (可选):',
+        scope: '选择一个 scope (可选):',
         // 选择 scope: custom 时会出下面的提示
-        // customScope: '请输入自定义的 scope (可选):',
+        customScope: '请输入自定义的 scope (可选):',
         subject: '填写一个简短精炼的描述语句 (必填):\n',
         body: '添加一个更加详细的描述，可以附上新增功能的描述或 bug 链接、截图链接 (可选)。使用 "|" 换行:\n',
         breaking: '列举非兼容性重大的变更 (可选):\n',
@@ -55,10 +55,10 @@ module.exports = {
     },
 
     // 是否允许自定义填写 scope ，设置为 true ，会自动添加两个 scope 类型 [{ name: 'empty', value: false },{ name: 'custom', value: 'custom' }]
-    allowCustomScopes: false,
-    allowBreakingChanges: ['feat', 'fix', 'build'],
+    allowCustomScopes: true,
+    allowBreakingChanges: false,
     // 跳过问题
-    // skipQuestions: ['body', 'footer'],
+    skipQuestions: ['scope', 'body', 'breaking','footer'],
 
     // subject 限制长度
     subjectLimit: 100,
